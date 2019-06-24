@@ -2,15 +2,18 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	background: black;
+	background: #02010a;
 	font-family: 'Dancing Script', cursive;
 
 }
 
+/*Div contenido*/
+
+
 .contenido{
 	max-width: 900px;
 	margin-top: 0px; 
-	/*margin-left: auto;*/
+	height: 100%;
 	
 }
 
@@ -22,11 +25,42 @@ body {
 }
 
 }
+
+.contenido {
+	transition: background 1s;
+	animation: 	miAnimacion 3s;
+
+}
+
+@-webkit-keyframes miAnimacion {
+
+	0%{
+
+		/*transform: 	rotate(45deg);*/
+		 margin-top:150%;
+		 width: 100%;
+	}
+
+	60%{
+		  margin-top: -5%;
+		  width: 100%;
+	
+	}
+
+	100%{
+		  margin-top: 0%;
+		  width: 100%;
+	
+	}
+}
+
+
+
 /*Cabecera*/
 
 .container-cabecera {
 
-	border-radius: 5px 5px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -51,11 +85,26 @@ body {
 
 }
 
-.menu a {
 
-text-decoration:none;
-color: white;
 
+a:link {
+  color: white; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 
@@ -88,6 +137,14 @@ color: white;
 	}
 }
 
+.container-cabecera {
+	
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
 
 /*Imagen Central*/
 
@@ -99,11 +156,9 @@ color: white;
 
 .imagen1{
 	margin-left: 10%;
-	padding: 0;
+	padding-top: 1%;
 	width: 80%;
-	border-style: solid;
-	border-width: 2px;
-
+	box-shadow: 2px 2px #02010a;
 }
 
 .imagen1	{
@@ -130,7 +185,7 @@ color: white;
 
 }/*Imagen Secundarias*/
 
-.container2 div {
+.imagenSecundarias div {
 	box-sizing: border-box;
 	min-width: 150px;
 	padding: 0px;
@@ -140,13 +195,11 @@ color: white;
 }
 
 
-.Contacto{
-	width: 25%;
-}
+
 
 
 #imagen2 {
-
+box-shadow:  #82c3a6;
 border-style: solid;
 border-width: 2px;
 -webkit-transition: rotate 10s;
@@ -167,7 +220,7 @@ margin-left: 10%;
 
 #imagen3 {
 
-
+box-shadow: 2px 2px #82c3a6;
 -webkit-transition: translate 10s;
 transition: translate 10s;
 border-style: solid;
@@ -178,7 +231,7 @@ margin-left: 10%;
 }
 
 #imagen3:hover{
-	box-shadow: 2px 2px #82c3a6; 
+	 
 	
 	transform: translate(20px, -5px);
 	border-style: none;
@@ -191,15 +244,8 @@ margin-left: 10%;
 }*/
 
 
-.container-cabecera {
-	
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-}
 
-.container2  {
+.imagenSecundarias  {
 	
 	display: -webkit-flex;
 	display: flex;
@@ -208,28 +254,13 @@ margin-left: 10%;
 
 	background:  #d5c75f;
 }
-/*
-@media (max-width: 899px){
 
-.imagenizq, .imagender{
-	width: 100%;
-	background: 	;
-	text-align: center;	
 
-}
 
-}*/
-.container3 {
-	margin-top: 0px;
-	background: white;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-}
-
-figcaption {
+.imagenSecundarias a {
 	text-align: center;
+	margin-left: 45%;
+
 }
 
 @media (min-width: 900px) {
@@ -253,7 +284,7 @@ figcaption {
 
 }
 @media (min-width: 900px) {
-	.container2 {
+	.imagenSecundarias {
 		width:100%;
 		margin-left: auto;
 		margin-right: auto;
@@ -261,11 +292,12 @@ figcaption {
 }
 
 
-/*Paisajes*/
+/*Paisajes Y retratos */
 .PoolImagenes{
 	background:  #d5c75f;	
 }
-.paisajes13 {
+
+.paisajes, .retratos {
 
 
 
@@ -275,7 +307,8 @@ figcaption {
 	flex-flow: row wrap;
 }
 
-.paisaje1 {
+
+.paisaje1, .retrato1 {
 	margin: 1px;
 	padding: 0;
 	margin-left: 7.5%;
@@ -286,7 +319,9 @@ figcaption {
 
 }
 
-.paisaje2, .paisaje4, .paisaje6 {
+
+.paisaje2, .paisaje4, .paisaje6,
+.retrato2, .retrato4, .retrato6 {
 	margin: 1px;
 	padding: 0;
 	margin-left: 7.5%;
@@ -301,7 +336,7 @@ figcaption {
 
 }
 
- .paisaje3 {
+ .paisaje3, .retrato3 {
 	margin: 1px;
 	padding: 0;
 	margin-left: 7.5%;
@@ -312,7 +347,7 @@ figcaption {
 
 }
 
-.paisaje5 {
+.paisaje5, .retrato5 {
 	margin: 1px;
 	padding: 0;
 	margin-left: 7.5%;
@@ -333,13 +368,34 @@ figcaption {
 		margin-left: 2.25%;
 	}
 
+
+	.retrato1, .retrato2, .retrato3, 
+	.retrato4, .retrato5, .retrato6  {
+		width: 30%;
+		margin-left: 2.25%;
+	}
+
 	
 }
 @media (min-width: 900px) {
-	.paisajes13 {
+	.paisajes, .retratos {
 		width:100%;
 		margin-left: auto;
 		margin-right: auto;
 		
 	}
+}
+
+/*Pie de Pagina*/
+.Contacto{
+	width: 25%;
+}
+.PiePagina {
+	margin-top: 0px;
+	border-radius: 0px 0px 10px 10px;
+	background: #C6d5c5;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 }
